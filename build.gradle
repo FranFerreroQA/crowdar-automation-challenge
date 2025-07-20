@@ -69,16 +69,16 @@ test.finalizedBy('renameReport')
 // Insert a task to rename the Cucumber report with a timestamp
 task renameReport(type: Copy) {
     def timestamp = new Date().format("yyyyMMdd_HHmmss")
-    from 'CucumberReports/Cucumber-report.html'
-    into 'CucumberReports/'
+    from 'cucumber-reports/cucumber-report.html'
+    into 'cucumber-reports/'
     rename { String fileName ->
-        fileName.replace('Cucumber-report.html', "Cucumber-report-${timestamp}.html")
+        fileName.replace('cucumber-report.html', "cucumber-report-${timestamp}.html")
     }
     doFirst {
         println "Renaming Cucumber report with timestamp: ${timestamp}"
     }
     doLast {
-        def original = file('CucumberReports/Cucumber-report.html')
+        def original = file('cucumber-reports/cucumber-report.html')
         if (original.exists()) {
             original.delete()
         }

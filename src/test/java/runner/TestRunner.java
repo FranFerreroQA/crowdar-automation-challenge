@@ -14,7 +14,7 @@ import utils.DriverManager;
     glue = "steps",                                      // Package containing step definitions
     plugin = {
         "pretty",                                        // Pretty console output
-        "html:CucumberReports/Cucumber-report.html"      // HTML report output path
+        "html:cucumber-reports/cucumber-report.html"     // HTML report output path
     },
     tags = "@login"                                      // Tag to filter which scenarios to run
 )
@@ -27,4 +27,3 @@ public class TestRunner {
     }
     
 }
-

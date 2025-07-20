@@ -5,7 +5,7 @@
 build
 
 # Ignore Cucumber Reports output directory
-CucumberReports
+cucumber-reports
 
 # Ignore IntelliJ IDEA project files
 *.iml
