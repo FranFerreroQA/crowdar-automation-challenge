@@ -14,7 +14,7 @@ Feature: Products
         Then he should see the purchase overview and be able to complete the payment
         And a thank-you message should be displayed, allowing the user to continue shopping
     
-    Scenario Outline: 2 (Positive) - The user selects sorting options for the inventory / Intentional failure test
+    Scenario Outline: 2 (Positive) - The user selects sorting options for the inventory
         Given The inventory is sorted by name from A to Z by default
         When the user selects to sort products by <sortBy>
         Then the products inventory should be reordered
